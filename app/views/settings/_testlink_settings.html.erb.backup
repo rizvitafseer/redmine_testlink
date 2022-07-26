@@ -1,0 +1,10 @@
+<h2> <%= l(:label_testlink_settings) %> </h2>
+
+<% testlink_url = Setting['plugin_redmine_testlink']['testlink_base_url'] %>
+<p><%= testlink_plugin_setting_text_field(:testlink_base_url, testlink_url) %></p>
+
+<% api_key = Setting['plugin_redmine_testlink']['testlink_api_key'] %>
+<p><%= testlink_plugin_setting_text_field(:testlink_api_key, api_key) %></p>
+
+<% testlink_projects = Setting['plugin_redmine_testlink']['testlink_projects']&.map(&:to_i) %>
+<p><%= testlink_plugin_setting_multiselect(:testlink_projects, Project.pluck(:name, :id), testlink_projects) %></p>

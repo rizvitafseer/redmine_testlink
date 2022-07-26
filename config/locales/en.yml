@@ -1,0 +1,19 @@
+# English strings go here for Rails i18n
+en:
+  label_testlink_settings: Testlink settings
+  setting_testlink_base_url: Testlink base url
+  setting_testlink_api_key: Testlink api key
+  setting_testlink_projects: Testlink allowed projects
+
+  label_test_case_plural: Test cases
+  label_test_case: Test case
+  field_status: Status
+  field_summary: Summary
+
+  status_draft: Draft
+  status_ready_for_review: Ready for review
+  status_review_in_progress: Review in progress
+  status_rework: Rework
+  status_obsolete: Obsolete
+  status_future: Future
+  status_final: Final

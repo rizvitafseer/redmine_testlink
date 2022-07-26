@@ -1,0 +1,22 @@
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'redmine_testlink', plugin: 'redmine_testlink' %>
+<% end %>
+
+<hr />
+<div class="test_cases">
+  <p><strong><%=l(:label_test_case_plural)%>:</strong></p>
+
+  <% if @test_cases.present? %>
+    <% @test_cases.each do |test_case| %>
+      <span class="test-case-details"><%= test_case.humanize_test_case_id %>
+        <div class="details">
+          <p><strong><%= l(:field_name) %></strong>: <%= test_case.name %></p>
+          <p><strong><%= l(:field_status) %></strong>: <%= test_case.humanize_status %></p>
+          <p><strong><%= l(:field_summary) %></strong>: <%= test_case.summary.html_safe %></p>
+        </div>
+      </span>
+    <% end %>
+  <% else @test_cases.blank? %>
+    <p><%= l(:label_no_data) %></p>
+  <% end %>
+</div>
